@@ -1,0 +1,53 @@
+47419 execve("./backup_tool", ["./backup_tool", "non_existent_file.txt"], 0x7ffc95521fe0 /* 229 vars */) = 0
+47419 newfstatat(AT_FDCWD, "/etc/ld.so.cache", {st_mode=S_IFREG|0644, st_size=173863, ...}, 0) = 0
+47419 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+47419 fstat(3, {st_mode=S_IFREG|0644, st_size=173863, ...}) = 0
+47419 mmap(NULL, 173863, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7bfa10dd0000
+47419 close(3)                          = 0
+47419 brk(NULL)                         = 0x646e59e5a000
+47419 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7bfa10dce000
+47419 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+47419 newfstatat(AT_FDCWD, "/etc/ld.so.cache", {st_mode=S_IFREG|0644, st_size=173863, ...}, 0) = 0
+47419 openat(AT_FDCWD, "/usr/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+47419 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300y\2\0\0\0\0\0@\0\0\0\0\0\0\0\240\274!\0\0\0\0\0\0\0\0\0@\08\0\20\0@\0@\0?\0\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0\200\3\0\0\0\0\0\0\200\3\0\0\0\0\0\0\10\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0"..., 1024) = 1024
+47419 fstat(3, {st_mode=S_IFREG|0755, st_size=2215072, ...}) = 0
+47419 mmap(NULL, 2239312, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7bfa10a00000
+47419 mmap(0x7bfa10a24000, 1552384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x24000) = 0x7bfa10a24000
+47419 mmap(0x7bfa10b9f000, 483328, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19f000) = 0x7bfa10b9f000
+47419 mmap(0x7bfa10c15000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x214000) = 0x7bfa10c15000
+47419 mmap(0x7bfa10c1b000, 31568, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7bfa10c1b000
+47419 close(3)                          = 0
+47419 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7bfa10dcb000
+47419 arch_prctl(ARCH_SET_FS, 0x7bfa10dcb740) = 0
+47419 set_tid_address(0x7bfa10dcbd68)   = 47419
+47419 set_robust_list(0x7bfa10dcba20, 24) = 0
+47419 rseq({cpu_id_start=0, cpu_id=RSEQ_CPU_ID_UNINITIALIZED, rseq_cs=NULL, flags=0, node_id=0, mm_cid=0, slice_ctrl={request=0, granted=0, __reserved=0}, __reserved=0}, 33, 0, 0x53053053) = 0
+47419 getrandom("\xda\xb0\xe9\x4c\x3a\xd2\x24\x46\xb7\xef\xa1\xd7\xe7\x50\xfb\x0a", 16, GRND_NONBLOCK) = 16
+47419 mprotect(0x7bfa10c15000, 16384, PROT_READ) = 0
+47419 mprotect(0x646e2380e000, 4096, PROT_READ) = 0
+47419 mprotect(0x7bfa10e41000, 8192, PROT_READ) = 0
+47419 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=16384*1024, rlim_max=RLIM64_INFINITY}) = 0
+47419 getrandom("\x90\x7d\xf5\x22\xf5\x9d\x25\x36", 8, GRND_NONBLOCK) = 8
+47419 mkdir("backup_dir", 0755)         = 0
+47419 openat(AT_FDCWD, "backup_dir/backup.log", O_WRONLY|O_CREAT|O_APPEND, 0644) = 3
+47419 write(3, "[1793384646] Backup directory initialized\n", 42) = 42
+47419 close(3)                          = 0
+47419 rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+47419 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7bfa10dcba10) = 47420
+47420 set_robust_list(0x7bfa10dcba20, 24 <unfinished ...>
+47419 rt_sigprocmask(SIG_SETMASK, [] <unfinished ...>
+47420 <... set_robust_list resumed>)    = 0
+47419 <... rt_sigprocmask resumed>, NULL, 8) = 0
+47419 wait4(47420 <unfinished ...>
+47420 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+47420 openat(AT_FDCWD, "non_existent_file.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
+47420 exit_group(1)                     = ?
+47420 +++ exited with 1 +++
+47419 <... wait4 resumed>, [{WIFEXITED(s) && WEXITSTATUS(s) == 1}], 0, NULL) = 47420
+47419 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=47420, si_uid=1000, si_status=1, si_utime=0, si_stime=0} ---
+47419 openat(AT_FDCWD, "backup_dir/backup.log", O_WRONLY|O_CREAT|O_APPEND, 0644) = 3
+47419 write(3, "[1793384646] Backup failed during file copy\n", 44) = 44
+47419 close(3)                          = 0
+47419 write(2, "[backup_tool] Backup FAILED (child exit=1)\n", 43) = 43
+47419 exit_group(1)                     = ?
+47419 +++ exited with 1 +++
