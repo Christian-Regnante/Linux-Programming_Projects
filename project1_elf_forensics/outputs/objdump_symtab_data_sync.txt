@@ -1,0 +1,49 @@
+
+data_sync:     file format elf64-x86-64
+
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000              crt1.o
+00000000004022c8 l     O .note.ABI-tag	0000000000000020              __abi_tag
+0000000000000000 l    df *ABS*	0000000000000000              crtbegin.o
+00000000004010e0 l     F .text	0000000000000000              deregister_tm_clones
+0000000000401110 l     F .text	0000000000000000              register_tm_clones
+0000000000401150 l     F .text	0000000000000000              __do_global_dtors_aux
+0000000000404040 l     O .bss	0000000000000001              completed.0
+0000000000403df0 l     O .fini_array	0000000000000000              __do_global_dtors_aux_fini_array_entry
+0000000000401180 l     F .text	0000000000000000              frame_dummy
+0000000000403de8 l     O .init_array	0000000000000000              __frame_dummy_init_array_entry
+0000000000000000 l    df *ABS*	0000000000000000              data_sync.c
+0000000000401186 l     F .text	000000000000007a              compare_and_report
+0000000000401200 l     F .text	00000000000000cf              scan_directory
+0000000000000000 l    df *ABS*	0000000000000000              crtend.o
+00000000004021c8 l     O .eh_frame	0000000000000000              __FRAME_END__
+0000000000000000 l    df *ABS*	0000000000000000              
+0000000000403df8 l     O .dynamic	0000000000000000              _DYNAMIC
+00000000004020a0 l       .eh_frame_hdr	0000000000000000              __GNU_EH_FRAME_HDR
+0000000000403fe8 l     O .got.plt	0000000000000000              _GLOBAL_OFFSET_TABLE_
+0000000000000000       F *UND*	0000000000000000              __libc_start_main@GLIBC_2.34
+0000000000000000  w      *UND*	0000000000000000              _ITM_deregisterTMCloneTable
+0000000000404030  w      .data	0000000000000000              data_start
+0000000000404040 g       .data	0000000000000000              _edata
+0000000000000000       F *UND*	0000000000000000              opendir@GLIBC_2.2.5
+0000000000401314 g     F .fini	0000000000000000              .hidden _fini
+0000000000000000       F *UND*	0000000000000000              printf@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              closedir@GLIBC_2.2.5
+0000000000404030 g       .data	0000000000000000              __data_start
+0000000000000000       F *UND*	0000000000000000              strcmp@GLIBC_2.2.5
+0000000000000000  w      *UND*	0000000000000000              __gmon_start__
+0000000000404038 g     O .data	0000000000000000              .hidden __dso_handle
+0000000000402000 g     O .rodata	0000000000000004              _IO_stdin_used
+0000000000000000       F *UND*	0000000000000000              readdir@GLIBC_2.2.5
+0000000000404048 g       .bss	0000000000000000              _end
+00000000004010c0 g     F .text	0000000000000005              .hidden _dl_relocate_static_pie
+0000000000401090 g     F .text	0000000000000026              _start
+0000000000404040 g       .bss	0000000000000000              __bss_start
+00000000004012cf g     F .text	0000000000000044              main
+00000000004010d0 g     F .text	0000000000000005              .hidden _dl_relocate_static_pie_ifunc
+0000000000000000       F *UND*	0000000000000000              perror@GLIBC_2.2.5
+0000000000404040 g     O .data	0000000000000000              .hidden __TMC_END__
+0000000000000000  w      *UND*	0000000000000000              _ITM_registerTMCloneTable
+0000000000401000 g     F .init	0000000000000000              .hidden _init
+
+
